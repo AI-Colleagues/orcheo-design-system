@@ -1,0 +1,8 @@
+# macOS metadata
+.DS_Store
+
+# Design System generated artifacts
+.thumbnail
+_adherence.oxlintrc.json
+_ds_bundle.js
+_ds_manifest.json

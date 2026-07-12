@@ -1,0 +1,37 @@
+<!-- @dsCard group="Colors" viewport="700x150" name="Semantic Intents" subtitle="Warm-harmonized success / warning / danger / info" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin: 0; padding: 20px; background: var(--surface-card); font-family: var(--font-sans); }
+  .row { display: flex; gap: 14px; }
+  .cell { flex: 1; border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--border-subtle); }
+  .bar { height: 44px; display: flex; align-items: center; padding: 0 12px; color: #fff; font-family: var(--font-mono); font-size: 12px; }
+  .foot { background: var(--surface-card); padding: 8px 12px; display: flex; align-items: center; gap: 8px; }
+  .dot { width: 12px; height: 12px; border-radius: var(--radius-pill); }
+  .txt { font-size: 12px; color: var(--text-muted); }
+</style>
+</head>
+<body>
+  <div class="row">
+    <div class="cell">
+      <div class="bar" style="background:var(--intent-success)">success</div>
+      <div class="foot" style="background:var(--intent-success-bg)"><span class="dot" style="background:var(--intent-success)"></span><span class="txt">run complete</span></div>
+    </div>
+    <div class="cell">
+      <div class="bar" style="background:var(--intent-warning)">warning</div>
+      <div class="foot" style="background:var(--intent-warning-bg)"><span class="dot" style="background:var(--intent-warning)"></span><span class="txt">rate limited</span></div>
+    </div>
+    <div class="cell">
+      <div class="bar" style="background:var(--intent-danger)">danger</div>
+      <div class="foot" style="background:var(--intent-danger-bg)"><span class="dot" style="background:var(--intent-danger)"></span><span class="txt">step failed</span></div>
+    </div>
+    <div class="cell">
+      <div class="bar" style="background:var(--intent-info)">info</div>
+      <div class="foot" style="background:var(--intent-info-bg)"><span class="dot" style="background:var(--intent-info)"></span><span class="txt">queued</span></div>
+    </div>
+  </div>
+</body>
+</html>

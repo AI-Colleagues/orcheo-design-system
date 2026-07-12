@@ -1,0 +1,47 @@
+<!-- @dsCard group="Components" viewport="700x200" name="Tabs" subtitle="Underline (line) and segmented (pill) variants" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../../styles.css">
+<style>
+  body { margin: 0; padding: 28px 24px; background: var(--surface-card); font-family: var(--font-sans); }
+  .stack { display: flex; flex-direction: column; gap: 28px; }
+  .lbl { font-family: var(--font-mono); font-size: 10px; letter-spacing: .06em; text-transform: uppercase; color: var(--text-subtle); margin-bottom: 10px; }
+</style>
+<script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js" crossorigin></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" crossorigin></script>
+<script src="../../_ds_bundle.js"></script>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel">
+  const { Tabs } = window.OrcheoDesignSystem_f1e686;
+  function Demo() {
+    return (
+      <div className="stack">
+        <div>
+          <div className="lbl">Line</div>
+          <Tabs variant="line" defaultValue="runs" items={[
+            { value: "overview", label: "Overview" },
+            { value: "runs", label: "Runs", count: 24 },
+            { value: "connectors", label: "Connectors", count: 6 },
+            { value: "settings", label: "Settings" },
+          ]} />
+        </div>
+        <div>
+          <div className="lbl">Pill</div>
+          <Tabs variant="pill" defaultValue="mine" items={[
+            { value: "all", label: "All workflows" },
+            { value: "mine", label: "Mine" },
+            { value: "shared", label: "Shared" },
+          ]} />
+        </div>
+      </div>
+    );
+  }
+  ReactDOM.createRoot(document.getElementById("root")).render(<Demo/>);
+</script>
+</body>
+</html>

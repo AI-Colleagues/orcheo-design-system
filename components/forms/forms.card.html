@@ -1,0 +1,45 @@
+<!-- @dsCard group="Components" viewport="700x340" name="Form Controls" subtitle="Input, Select, Textarea, Checkbox, Switch" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../../styles.css">
+<style>
+  body { margin: 0; padding: 24px; background: var(--surface-card); font-family: var(--font-sans); }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px 24px; max-width: 640px; }
+  .stack { display: flex; flex-direction: column; gap: 14px; }
+</style>
+<script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js" crossorigin></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" crossorigin></script>
+<script src="../../_ds_bundle.js"></script>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel">
+  const { Input, Select, Textarea, Checkbox, Switch } = window.OrcheoDesignSystem_f1e686;
+  function Demo() {
+    return (
+      <div className="grid">
+        <Input label="Workflow name" placeholder="e.g. Daily research digest" />
+        <Select label="Model" options={["GPT-4o","Claude Sonnet 4","Llama 3.1"]} />
+        <Input label="API key" mono error="That key was rejected." defaultValue="sk-live-7f3a…" />
+        <Input label="Schedule" placeholder="0 9 * * *" mono hint="Cron expression, UTC" />
+        <div style={{gridColumn:"1 / -1"}}>
+          <Textarea label="System prompt" placeholder="Describe what this agent should do…" defaultValue="You are a research agent. Summarize the day's papers and post to Slack." />
+        </div>
+        <div className="stack">
+          <Checkbox label="Run on a schedule" defaultChecked />
+          <Checkbox label="Notify on failure" />
+        </div>
+        <div className="stack">
+          <Switch label="Workflow enabled" defaultChecked />
+          <Switch label="Verbose logging" />
+        </div>
+      </div>
+    );
+  }
+  ReactDOM.createRoot(document.getElementById("root")).render(<Demo/>);
+</script>
+</body>
+</html>

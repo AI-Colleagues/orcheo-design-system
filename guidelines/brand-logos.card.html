@@ -1,0 +1,24 @@
+<!-- @dsCard group="Brand" viewport="700x200" name="Logo Marks" subtitle="Orcheo product icon + AI Colleagues corporate mark" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin: 0; padding: 24px; background: var(--surface-card); font-family: var(--font-mono); display: flex; gap: 18px; }
+  .tile { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; border-radius: var(--radius-lg); padding: 22px 12px; border: 1px solid var(--border-subtle); }
+  .tile img { height: 76px; width: auto; }
+  .light { background: var(--ink-50); }
+  .ink { background: var(--ink-950); border-color: var(--ink-800); }
+  .orange { background: var(--orange-500); border: none; }
+  .cap { font-size: 10px; color: var(--text-subtle); letter-spacing: .04em; }
+  .ink .cap, .orange .cap { color: rgba(255,255,255,.7); }
+</style>
+</head>
+<body>
+  <div class="tile light"><img src="../assets/orcheo-icon.png" alt="Orcheo icon"><div class="cap">orcheo-icon</div></div>
+  <div class="tile light"><img src="../assets/aic-mark-ink.png" alt="AIC mark ink" style="height:64px"><div class="cap">aic-mark-ink</div></div>
+  <div class="tile ink"><img src="../assets/aic-mark-white.png" alt="AIC mark white" style="height:64px"><div class="cap">aic-mark-white</div></div>
+  <div class="tile orange"><img src="../assets/aic-mark-white.png" alt="AIC mark on brand" style="height:64px"><div class="cap">on brand orange</div></div>
+</body>
+</html>

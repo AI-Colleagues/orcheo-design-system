@@ -1,0 +1,84 @@
+/* ============================================================
+   BASE — resets + element defaults built on the tokens.
+   Kept light: sets document typography, selection, and a few
+   brand-flavored primitives. Components own their own styling.
+   ============================================================ */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  line-height: var(--leading-normal);
+  font-weight: var(--weight-regular);
+  color: var(--text-body);
+  background: var(--surface-page);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-family: var(--font-display);
+  color: var(--text-strong);
+  font-weight: var(--weight-medium);
+  letter-spacing: var(--tracking-tight);
+  line-height: var(--leading-snug);
+  text-wrap: balance;
+}
+h1 { font-size: var(--text-4xl); font-weight: var(--weight-bold); letter-spacing: var(--tracking-tighter); line-height: var(--leading-tight); }
+h2 { font-size: var(--text-3xl); }
+h3 { font-size: var(--text-2xl); }
+h4 { font-size: var(--text-xl); }
+
+p { margin: 0; text-wrap: pretty; }
+
+a {
+  color: var(--text-brand);
+  text-decoration: none;
+  transition: color var(--duration-fast) var(--ease-standard);
+}
+a:hover { color: var(--orange-800); }
+
+code, kbd, pre, samp { font-family: var(--font-mono); font-size: 0.92em; }
+
+::selection { background: var(--orange-200); color: var(--ink-950); }
+
+:focus-visible { outline: none; box-shadow: var(--ring-focus); border-radius: var(--radius-sm); }
+
+hr { border: none; border-top: 1px solid var(--border-subtle); margin: var(--space-6) 0; }
+
+/* ---- Brand primitives / utilities ---- */
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  font-weight: var(--weight-medium);
+  letter-spacing: var(--tracking-caps);
+  text-transform: uppercase;
+  color: var(--text-brand);
+}
+
+.display {
+  font-family: var(--font-display);
+  font-weight: var(--weight-bold);
+  letter-spacing: var(--tracking-tighter);
+  line-height: var(--leading-tight);
+  color: var(--text-strong);
+}
+
+.mono { font-family: var(--font-mono); }
+
+/* Decorative circuit-line divider, echoing the orchestration motif */
+.circuit-rule {
+  height: 1px;
+  background-image: repeating-linear-gradient(90deg, var(--border-circuit) 0 12px, transparent 12px 20px);
+  border: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}

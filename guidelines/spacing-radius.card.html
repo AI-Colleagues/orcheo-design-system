@@ -1,0 +1,26 @@
+<!-- @dsCard group="Spacing" viewport="700x170" name="Corner Radius" subtitle="Soft squircle bias — echoes the app icon" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin: 0; padding: 24px; background: var(--surface-card); font-family: var(--font-mono); }
+  .row { display: flex; gap: 18px; align-items: flex-end; }
+  .col { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+  .box { width: 64px; height: 64px; background: var(--orange-100); border: 1.5px solid var(--orange-500); }
+  .v { font-size: 10px; color: var(--text-muted); }
+</style>
+</head>
+<body>
+  <div class="row">
+    <div class="col"><div class="box" style="border-radius:var(--radius-xs)"></div><div class="v">xs · 4</div></div>
+    <div class="col"><div class="box" style="border-radius:var(--radius-sm)"></div><div class="v">sm · 6</div></div>
+    <div class="col"><div class="box" style="border-radius:var(--radius-md)"></div><div class="v">md · 10</div></div>
+    <div class="col"><div class="box" style="border-radius:var(--radius-lg)"></div><div class="v">lg · 14</div></div>
+    <div class="col"><div class="box" style="border-radius:var(--radius-xl)"></div><div class="v">xl · 20</div></div>
+    <div class="col"><div class="box" style="border-radius:var(--radius-2xl)"></div><div class="v">2xl · 28</div></div>
+    <div class="col"><div class="box" style="border-radius:var(--radius-pill)"></div><div class="v">pill</div></div>
+  </div>
+</body>
+</html>

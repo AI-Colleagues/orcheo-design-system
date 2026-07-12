@@ -1,0 +1,37 @@
+<!-- @dsCard group="Brand" viewport="700x180" name="Circuit Motif" subtitle="Orchestration node-and-wire decoration" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin: 0; padding: 0; background: var(--surface-cream); font-family: var(--font-mono); }
+  .wrap { position: relative; height: 180px; overflow: hidden; display: flex; align-items: center; padding: 0 28px; }
+  .label { position: relative; z-index: 2; max-width: 320px; }
+  .e { color: var(--text-brand); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; }
+  .d { font-family: var(--font-display); font-weight: 700; letter-spacing: -.02em; color: var(--text-strong); font-size: 26px; margin-top: 6px; line-height: 1.1; }
+  svg { position: absolute; right: -10px; top: 50%; transform: translateY(-50%); }
+  .wire { stroke: var(--tan-400); stroke-width: 2; fill: none; }
+  .node { fill: var(--surface-cream); stroke: var(--orange-500); stroke-width: 3; }
+  .hub { fill: var(--orange-500); }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="label">
+      <div class="e">Visual motif</div>
+      <div class="d">Nodes, connectors &amp; a conducting hub</div>
+    </div>
+    <svg width="300" height="180" viewBox="0 0 300 180">
+      <circle class="hub" cx="150" cy="90" r="22"/>
+      <path class="wire" d="M150 90 L60 30 M150 90 L40 90 M150 90 L70 150 M150 90 L250 40 M150 90 L270 100 M150 90 L240 150"/>
+      <circle class="node" cx="60" cy="30" r="7"/>
+      <circle class="node" cx="40" cy="90" r="7"/>
+      <circle class="node" cx="70" cy="150" r="7"/>
+      <circle class="node" cx="250" cy="40" r="7"/>
+      <circle class="node" cx="270" cy="100" r="7"/>
+      <circle class="node" cx="240" cy="150" r="7"/>
+    </svg>
+  </div>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<!-- @template name="Orcheo deck" description="Branded 16:9 slide deck — title, section, content, and stat layouts" -->
+<helmet>
+<script src="./ds-base.js"></script>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</helmet>
+<div style="display:flex; flex-direction:column; gap:32px; padding:32px; background:#e8e4da; font-family:var(--font-sans); align-items:center;">
+
+  <!-- Slide 1 — Title -->
+  <section data-screen-label="01" style="width:1280px; height:720px; flex:none; position:relative; background:var(--ink-950); border-radius:16px; overflow:hidden; box-shadow:var(--shadow-xl); display:flex; flex-direction:column; justify-content:center; padding:96px;">
+    <div style="position:absolute; right:-120px; top:50%; transform:translateY(-50%); width:520px; height:520px; opacity:0.12;">
+      <img src="../../assets/orcheo-icon.png" alt="" style="width:100%; height:100%; object-fit:contain;">
+    </div>
+    <div style="display:flex; align-items:center; gap:12px;">
+      <img src="../../assets/orcheo-icon.png" alt="Orcheo" style="width:44px; height:44px; border-radius:10px;">
+      <span style="font-family:var(--font-display); font-weight:700; font-size:24px; color:#fff; letter-spacing:-0.02em;">Orcheo</span>
+    </div>
+    <div style="font-family:var(--font-mono); font-size:14px; letter-spacing:0.08em; text-transform:uppercase; color:var(--orange-400); margin-top:64px;">Product strategy · Q3 2026</div>
+    <h1 style="font-family:var(--font-display); font-weight:700; font-size:84px; line-height:1.0; letter-spacing:-0.035em; color:#fff; margin:18px 0 0; max-width:18ch;">Orchestrate your agents. Ship the work.</h1>
+    <p style="font-size:22px; color:var(--ink-300); margin:28px 0 0; max-width:44ch; line-height:1.5;">Where AI Colleagues is taking agentic workflow orchestration this quarter.</p>
+    <div style="position:absolute; bottom:48px; left:96px; display:flex; align-items:center; gap:10px;">
+      <img src="../../assets/aic-mark-white.png" alt="AI Colleagues" style="height:22px;">
+      <span style="font-family:var(--font-mono); font-size:13px; color:var(--ink-400);">AI Colleagues</span>
+    </div>
+  </section>
+
+  <!-- Slide 2 — Section divider -->
+  <section data-screen-label="02" style="width:1280px; height:720px; flex:none; position:relative; background:var(--orange-500); border-radius:16px; overflow:hidden; box-shadow:var(--shadow-xl); display:flex; flex-direction:column; justify-content:center; padding:96px;">
+    <div style="font-family:var(--font-display); font-weight:700; font-size:200px; line-height:0.9; color:rgba(255,255,255,0.22); letter-spacing:-0.04em;">01</div>
+    <h2 style="font-family:var(--font-display); font-weight:700; font-size:64px; letter-spacing:-0.03em; color:#fff; margin:8px 0 0;">The orchestration layer</h2>
+    <p style="font-size:21px; color:rgba(255,255,255,0.9); margin:20px 0 0; max-width:42ch; line-height:1.5;">Why every team running agents needs a control plane — and what we built.</p>
+  </section>
+
+  <!-- Slide 3 — Content + side panel -->
+  <section data-screen-label="03" style="width:1280px; height:720px; flex:none; background:#fff; border-radius:16px; overflow:hidden; box-shadow:var(--shadow-xl); display:grid; grid-template-columns:1.25fr 1fr;">
+    <div style="padding:88px 64px; display:flex; flex-direction:column; justify-content:center;">
+      <div style="font-family:var(--font-mono); font-size:14px; letter-spacing:0.08em; text-transform:uppercase; color:var(--orange-700);">What ships this quarter</div>
+      <h2 style="font-family:var(--font-display); font-weight:700; font-size:48px; letter-spacing:-0.03em; color:var(--ink-950); margin:14px 0 0;">Three bets</h2>
+      <div style="display:flex; flex-direction:column; gap:24px; margin-top:40px;">
+        <div style="display:flex; gap:18px; align-items:flex-start;">
+          <div style="font-family:var(--font-mono); font-size:15px; color:var(--orange-600); font-weight:500; padding-top:4px;">01</div>
+          <div>
+            <div style="font-family:var(--font-display); font-weight:500; font-size:23px; color:var(--ink-950);">Visual canvas, GA</div>
+            <div style="font-size:16px; color:var(--ink-600); margin-top:4px; line-height:1.5;">Drag-and-drop orchestration leaves beta, with versioning and rollbacks.</div>
+          </div>
+        </div>
+        <div style="display:flex; gap:18px; align-items:flex-start;">
+          <div style="font-family:var(--font-mono); font-size:15px; color:var(--orange-600); font-weight:500; padding-top:4px;">02</div>
+          <div>
+            <div style="font-family:var(--font-display); font-weight:500; font-size:23px; color:var(--ink-950);">200+ connectors</div>
+            <div style="font-size:16px; color:var(--ink-600); margin-top:4px; line-height:1.5;">Doubling the connector catalog, with scoped, auditable tool access.</div>
+          </div>
+        </div>
+        <div style="display:flex; gap:18px; align-items:flex-start;">
+          <div style="font-family:var(--font-mono); font-size:15px; color:var(--orange-600); font-weight:500; padding-top:4px;">03</div>
+          <div>
+            <div style="font-family:var(--font-display); font-weight:500; font-size:23px; color:var(--ink-950);">Run replay & debug</div>
+            <div style="font-size:16px; color:var(--ink-600); margin-top:4px; line-height:1.5;">Step-through traces for every run, with one-click replay from any node.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="background:var(--cream-200); display:flex; align-items:center; justify-content:center; position:relative;">
+      <svg width="320" height="320" viewBox="0 0 320 320">
+        <circle cx="160" cy="160" r="40" fill="var(--orange-500)"></circle>
+        <g stroke="var(--tan-400)" stroke-width="3" fill="none">
+          <path d="M160 160 L60 70 M160 160 L40 160 M160 160 L70 250 M160 160 L260 70 M160 160 L285 170 M160 160 L255 255"></path>
+        </g>
+        <g fill="var(--cream-200)" stroke="var(--orange-500)" stroke-width="4">
+          <circle cx="60" cy="70" r="11"></circle><circle cx="40" cy="160" r="11"></circle>
+          <circle cx="70" cy="250" r="11"></circle><circle cx="260" cy="70" r="11"></circle>
+          <circle cx="285" cy="170" r="11"></circle><circle cx="255" cy="255" r="11"></circle>
+        </g>
+      </svg>
+    </div>
+  </section>
+
+  <!-- Slide 4 — Big stat -->
+  <section data-screen-label="04" style="width:1280px; height:720px; flex:none; background:var(--cream-200); border-radius:16px; overflow:hidden; box-shadow:var(--shadow-xl); display:flex; flex-direction:column; justify-content:center; padding:96px;">
+    <div style="font-family:var(--font-mono); font-size:14px; letter-spacing:0.08em; text-transform:uppercase; color:var(--orange-700);">The number that matters</div>
+    <div style="font-family:var(--font-display); font-weight:700; font-size:200px; line-height:0.92; letter-spacing:-0.04em; color:var(--ink-950); margin-top:16px;">12M+</div>
+    <p style="font-size:26px; color:var(--ink-700); margin:16px 0 0; max-width:32ch; line-height:1.4;">workflow runs orchestrated through Orcheo every month — up 3× year over year.</p>
+  </section>
+
+</div>
+</x-dc>
+</body>
+</html>

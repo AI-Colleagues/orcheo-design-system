@@ -1,0 +1,66 @@
+/* ============================================================
+   TYPOGRAPHY TOKENS
+   Display: Space Grotesk — geometric, technical, a little quirky (brand voice)
+   Sans:    IBM Plex Sans — engineered humanist UI / body
+   Mono:    IBM Plex Mono — node IDs, agent names, code, workflow tokens
+   ============================================================ */
+
+:root {
+  /* Families */
+  --font-display: "Space Grotesk", "Space Grotesk Fallback", system-ui, sans-serif;
+  --font-sans: "IBM Plex Sans", "IBM Plex Sans Fallback", system-ui, -apple-system, sans-serif;
+  --font-mono: "IBM Plex Mono", "IBM Plex Mono Fallback", ui-monospace, "SF Mono", Menlo, monospace;
+
+  /* Weights */
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+
+  /* Type scale — 1.25 major-third, tuned for product + marketing */
+  --text-2xs: 11px;
+  --text-xs:  12px;
+  --text-sm:  13px;
+  --text-base: 15px;   /* product body */
+  --text-md:  17px;
+  --text-lg:  20px;
+  --text-xl:  25px;
+  --text-2xl: 31px;
+  --text-3xl: 39px;
+  --text-4xl: 49px;
+  --text-5xl: 61px;
+  --text-6xl: 76px;
+
+  /* Line heights */
+  --leading-tight: 1.05;   /* display headlines */
+  --leading-snug: 1.2;
+  --leading-normal: 1.5;   /* body */
+  --leading-relaxed: 1.65;
+
+  /* Letter spacing */
+  --tracking-tighter: -0.03em;  /* large display */
+  --tracking-tight: -0.015em;   /* headings */
+  --tracking-normal: 0;
+  --tracking-wide: 0.02em;
+  --tracking-caps: 0.08em;      /* eyebrows / overlines */
+
+  /* Semantic roles */
+  --role-display-font: var(--font-display);
+  --role-display-weight: var(--weight-bold);
+  --role-display-tracking: var(--tracking-tighter);
+  --role-display-leading: var(--leading-tight);
+
+  --role-heading-font: var(--font-display);
+  --role-heading-weight: var(--weight-medium);
+  --role-heading-tracking: var(--tracking-tight);
+
+  --role-body-font: var(--font-sans);
+  --role-body-weight: var(--weight-regular);
+  --role-body-leading: var(--leading-normal);
+
+  --role-eyebrow-font: var(--font-mono);
+  --role-eyebrow-weight: var(--weight-medium);
+  --role-eyebrow-tracking: var(--tracking-caps);
+
+  --role-code-font: var(--font-mono);
+}

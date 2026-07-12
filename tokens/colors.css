@@ -1,0 +1,99 @@
+/* ============================================================
+   ORCHEO / AI COLLEAGUES — COLOR TOKENS
+   Warm circuit-orchestration palette.
+   Orange (Orcheo product) · Ink (AIC corporate) · Cream paper · Tan circuitry
+   ============================================================ */
+
+:root {
+  /* ---- BRAND CORE ---- */
+  --orcheo-orange: #f87825;   /* sampled from the Orcheo app icon hub */
+  --aic-ink:       #0e0e0c;   /* AI Colleagues corporate black */
+  --brand-cream:   #f6f5d4;   /* parchment field inside the orchestration ring */
+  --brand-tan:     #e0c090;   /* connector / circuit line color */
+
+  /* ---- ORANGE RAMP (primary) ---- */
+  --orange-50:  #fef4ea;
+  --orange-100: #fde2cc;
+  --orange-200: #fbc79b;
+  --orange-300: #f9a862;
+  --orange-400: #f88e3d;
+  --orange-500: #f87825;   /* base brand orange */
+  --orange-600: #e5631a;   /* hover */
+  --orange-700: #c04e12;   /* active / pressed */
+  --orange-800: #963c10;
+  --orange-900: #6b2c0e;
+
+  /* ---- WARM NEUTRAL RAMP (ink, tinted toward parchment) ---- */
+  --ink-950: #0e0e0c;
+  --ink-900: #1a1916;
+  --ink-800: #292722;
+  --ink-700: #3d3a33;
+  --ink-600: #57534a;
+  --ink-500: #756f63;
+  --ink-400: #9a9384;
+  --ink-300: #c0b9a8;
+  --ink-200: #dcd6c8;
+  --ink-100: #ede9df;
+  --ink-50:  #f7f5ef;
+  --white:   #ffffff;
+
+  /* ---- CREAM / PARCHMENT RAMP ---- */
+  --cream-50:  #fdfdf6;
+  --cream-100: #faf9ec;
+  --cream-200: #f6f5d4;   /* brand cream */
+  --cream-300: #ece9be;
+  --cream-400: #ddd9a4;
+
+  /* ---- TAN RAMP (circuitry / decorative) ---- */
+  --tan-200: #ecdcc0;
+  --tan-300: #e0c090;
+  --tan-400: #d4ac74;
+  --tan-500: #c0945a;
+
+  /* ---- SEMANTIC HUES (warm-harmonized) ---- */
+  --green-500:  #2e7d52;  --green-600:  #246642;  --green-100: #e2f0e8;
+  --amber-500:  #d99a16;  --amber-600:  #b67f10;  --amber-100: #faeed0;
+  --red-500:    #ce3f26;  --red-600:    #ad3119;  --red-100:   #fbe2db;
+  --blue-500:   #3e6e96;  --blue-600:   #305878;  --blue-100:  #e2ecf3;
+
+  /* ============================================================
+     SEMANTIC ALIASES — reference these in product UI, not raw ramps
+     ============================================================ */
+
+  /* Surfaces (light theme, warm paper) */
+  --surface-page:     var(--ink-50);     /* app background */
+  --surface-card:     var(--white);      /* raised panels, cards */
+  --surface-sunken:   var(--ink-100);    /* wells, code blocks, canvas */
+  --surface-inverse:  var(--ink-950);    /* dark panels, footers */
+  --surface-brand:    var(--orange-500); /* primary CTAs, brand fills */
+  --surface-brand-soft: var(--orange-50);/* tinted brand backgrounds */
+  --surface-cream:    var(--cream-200);  /* warm feature sections */
+
+  /* Text */
+  --text-strong:   var(--ink-950);   /* headings */
+  --text-body:     var(--ink-800);   /* paragraphs */
+  --text-muted:    var(--ink-600);   /* secondary, captions */
+  --text-subtle:   var(--ink-400);   /* placeholders, disabled */
+  --text-on-brand: var(--white);     /* text on orange */
+  --text-on-dark:  var(--ink-100);   /* text on ink surfaces */
+  --text-brand:    var(--orange-700);/* links, brand emphasis on light */
+
+  /* Borders & lines */
+  --border-subtle:  var(--ink-200);
+  --border-default: var(--ink-300);
+  --border-strong:  var(--ink-400);
+  --border-brand:   var(--orange-500);
+  --border-circuit: var(--tan-300);  /* decorative connector lines */
+
+  /* Interactive states */
+  --action-primary:        var(--orange-500);
+  --action-primary-hover:  var(--orange-600);
+  --action-primary-active: var(--orange-700);
+  --focus-ring:            var(--orange-400);
+
+  /* Semantic intents */
+  --intent-success: var(--green-500);  --intent-success-bg: var(--green-100);
+  --intent-warning: var(--amber-500);  --intent-warning-bg: var(--amber-100);
+  --intent-danger:  var(--red-500);    --intent-danger-bg:  var(--red-100);
+  --intent-info:    var(--blue-500);   --intent-info-bg:    var(--blue-100);
+}

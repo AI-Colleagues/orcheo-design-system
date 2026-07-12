@@ -1,0 +1,65 @@
+<!-- @dsCard group="Components" viewport="700x340" name="Display — Card, Badge, Tag, Avatar, NodeChip" subtitle="Surfaces, status pills, tokens, avatars, workflow nodes" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../../styles.css">
+<style>
+  body { margin: 0; padding: 24px; background: var(--ink-50); font-family: var(--font-sans); }
+  .grid { display: flex; flex-direction: column; gap: 18px; }
+  .row { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+  .lbl { font-family: var(--font-mono); font-size: 10px; letter-spacing: .06em; text-transform: uppercase; color: var(--text-subtle); width: 64px; flex: none; }
+</style>
+<script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js" crossorigin></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" crossorigin></script>
+<script src="../../_ds_bundle.js"></script>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel">
+  const { Card, Badge, Tag, Avatar, AvatarGroup, NodeChip, Button } = window.OrcheoDesignSystem_f1e686;
+  const I = (p) => <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">{p}</svg>;
+  const Clock = () => I(<><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></>);
+  const Bot = () => I(<><rect x="4" y="8" width="16" height="12" rx="2"/><path d="M12 8V4M9 14h.01M15 14h.01"/></>);
+  const Slack = () => I(<><rect x="6" y="6" width="12" height="12" rx="3"/></>);
+  function Demo() {
+    return (
+      <div className="grid">
+        <div className="row" style={{alignItems:"stretch"}}>
+          <Card title="Daily research digest" subtitle="Runs at 09:00 UTC" style={{width:280}}
+            footer={<><Button size="sm">Open</Button><Badge intent="success" dot>healthy</Badge></>}>
+            Summarizes new papers and posts the highlights to Slack each morning.
+          </Card>
+          <div className="grid" style={{gap:12}}>
+            <div className="row"><span className="lbl">Badges</span>
+              <Badge intent="success" dot>complete</Badge>
+              <Badge intent="warning" dot>rate limited</Badge>
+              <Badge intent="danger" dot>failed</Badge>
+              <Badge intent="info" dot>queued</Badge>
+              <Badge intent="solid">live</Badge>
+            </div>
+            <div className="row"><span className="lbl">Tags</span>
+              <Tag variant="cream">claude-sonnet-4</Tag>
+              <Tag>slack</Tag>
+              <Tag onRemove={()=>{}}>http</Tag>
+            </div>
+            <div className="row"><span className="lbl">Avatars</span>
+              <AvatarGroup><Avatar name="Ada Lovelace"/><Avatar name="Grace Hopper"/><Avatar name="Alan Turing"/></AvatarGroup>
+              <Avatar name="Researcher" agent/>
+              <Avatar name="Ada Lovelace" size="sm"/>
+            </div>
+          </div>
+        </div>
+        <div className="row"><span className="lbl">Nodes</span>
+          <NodeChip kind="trigger" title="Schedule" meta="0 9 * * *" status="done" icon={<Clock/>}/>
+          <NodeChip kind="agent" title="Researcher" meta="claude-sonnet-4" status="running" active icon={<Bot/>}/>
+          <NodeChip kind="tool" title="Post to Slack" meta="#research" status="idle" icon={<Slack/>}/>
+        </div>
+      </div>
+    );
+  }
+  ReactDOM.createRoot(document.getElementById("root")).render(<Demo/>);
+</script>
+</body>
+</html>
