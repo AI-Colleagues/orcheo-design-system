@@ -51,7 +51,7 @@
   --role-display-leading: var(--leading-tight);
 
   --role-heading-font: var(--font-display);
-  --role-heading-weight: var(--weight-medium);
+  --role-heading-weight: var(--weight-semibold);
   --role-heading-tracking: var(--tracking-tight);
 
   --role-body-font: var(--font-sans);

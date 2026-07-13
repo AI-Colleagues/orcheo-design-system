@@ -89,9 +89,18 @@ A **warm circuit-orchestration palette**, all sampled from the marks.
 Use **semantic aliases** (`--surface-card`, `--text-body`, `--action-primary`, …) in product UI,
 not raw ramp steps. Reach for ramp steps only when composing new semantic tokens.
 
+### Dark theme
+Dark mode is **first-class**: add `class="dark"` (or `data-theme="dark"`) to `<html>` and every
+semantic alias flips — surfaces go warm ink (`--ink-950` page, `--ink-900` cards), text lightens,
+links move to `--orange-300`, intent backgrounds become deep warm tints, and shadows gain weight.
+Raw ramps never change, so **any UI written against the aliases is dark-ready for free**. Two
+rules of dark: interactive orange **lightens** on hover (`--orange-400`), never darkens; and
+surfaces stay warm-tinted — never slip into cool gray-blue.
+
 ### Type
-- **Display — Space Grotesk** (bold/medium, tight tracking): headlines, hero, big numbers. Its
-  geometric quirk gives the brand personality and pairs with the circuit motif.
+- **Display — Space Grotesk** (bold/semibold, tight tracking): headlines, hero, big numbers. Its
+  geometric quirk gives the brand personality and pairs with the circuit motif. H1 is bold;
+  h2–h6 are **semibold** so section headings hold their own against body text.
 - **Sans — IBM Plex Sans:** all UI and body. Engineered, humanist, legible at small sizes.
 - **Mono — IBM Plex Mono:** node IDs, agent names, run logs, code, and the ALL-CAPS **eyebrow**
   overline style (`.eyebrow`). Mono is a load-bearing brand signal here — it says "this is an
@@ -125,6 +134,10 @@ not raw ramp steps. Reach for ramp steps only when composing new semantic tokens
 - Default app/page background is warm off-white `--ink-50`. **No purple/blue gradients.**
 - Warmth comes from cream feature sections and the **circuit-line motif** — thin tan node-and-wire
   patterns, used decoratively at low contrast (never busy). Full-bleed imagery is warm-toned.
+- Brand utilities (in `tokens/base.css`): `.circuit-rule` (dashed tan divider), `.dot-grid`
+  (warm dot lattice — the workspace-canvas motif, theme-aware via `--dot-grid-color`),
+  `.eyebrow-pill` (mono overline in a soft brand pill), and `.glass` (translucent sticky-bar
+  surface via `--surface-glass` + backdrop blur).
 
 ### Motion
 - Purposeful and quick. `--duration-fast` (120ms) for hovers, `--duration-base` (200ms) for most
@@ -134,11 +147,15 @@ not raw ramp steps. Reach for ramp steps only when composing new semantic tokens
   `prefers-reduced-motion`.
 
 ### Interaction states
-- **Hover:** primary darkens one step (`--orange-600`); neutral/ghost gains a faint warm tint
-  (`--ink-100`). Links darken to `--orange-800`.
+- **Hover:** primary darkens one step (`--orange-600`) — on dark theme it *lightens* instead
+  (`--orange-400`); neutral/ghost gains a faint warm tint (`--surface-hover`). Links darken to
+  `--orange-800` (lighten to `--orange-200` on dark).
 - **Active/press:** darkens another step (`--orange-700`); subtle 1px translate or scale(.98), no
-  big squash.
-- **Focus:** always-visible warm focus ring (`--ring-focus`), never removed.
+  big squash. Neutral press uses `--surface-active`.
+- **Focus:** always-visible warm focus ring (`--ring-focus`) — a 2px surface-colored gap plus a
+  2px `--focus-ring` orange ring; never removed.
+- **Buttons:** labels are **semibold**; primary carries a faint inset top sheen so the orange
+  doesn't read flat.
 - **Disabled:** reduced contrast via `--text-subtle` + muted surface; no opacity-only disabling on
   text.
 
