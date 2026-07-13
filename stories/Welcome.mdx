@@ -1,0 +1,43 @@
+import { Meta } from "@storybook/addon-docs/blocks";
+
+<Meta title="Welcome" />
+
+# Orcheo design system
+
+The design system for **AI Colleagues (AIC)** and its flagship product **Orcheo**, an agentic
+workflow orchestration platform.
+
+> **Two brands, one system.** AI Colleagues is the parent company (corporate, ink-black, the
+> circuit-brain "C" mark). Orcheo is the product (warm orange, the orchestration-ring icon).
+> They share type, spacing, motion, and components; they differ in dominant color and voice.
+> Use **ink/black + restraint** for AIC corporate surfaces, **orange + warmth** for Orcheo product.
+
+<div style={{ display: "flex", gap: 24, alignItems: "center", margin: "24px 0" }}>
+  <img src="./orcheo-icon.png" alt="Orcheo product icon" width="96" />
+  <img src="./aic-mark.png" alt="AI Colleagues corporate mark" width="96" />
+</div>
+
+## What's here
+
+- **Foundations** — color ramps and semantic aliases, the type system
+  (Space Grotesk / IBM Plex Sans / IBM Plex Mono), the 4px spacing grid, radii, and
+  warm-tinted elevation.
+- **Buttons / Forms / Display / Navigation / Feedback** — the core component set:
+  Button, IconButton, Input, Textarea, Select, Checkbox, Switch, Badge, Tag, Avatar,
+  Card, Tabs, Tooltip, Dialog, Toast.
+- **Orcheo** — brand-specific pieces, starting with **NodeChip**, the atom of the
+  orchestration canvas.
+
+## Ground rules
+
+- **Sentence case everywhere** — buttons, headings, menus, nav. ALL-CAPS is reserved for the
+  mono eyebrow style.
+- Use **semantic aliases** (`--surface-card`, `--text-body`, `--action-primary`, …) in product
+  UI, not raw ramp steps.
+- Neutrals are a **warm gray ramp** — never cool/blue gray. Shadows are warm-tinted, never
+  black-blue.
+- Icons are **Lucide** — ~1.75px stroke, `currentColor`, 20px default. No emoji as iconography.
+- Every interactive component keeps its **focus ring** (`--ring-focus`).
+
+The full written system — voice and tone, motion, interaction states, and the token index —
+lives in `readme.md` at the repository root.

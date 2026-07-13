@@ -164,6 +164,22 @@ not raw ramp steps. Reach for ramp steps only when composing new semantic tokens
 
 ---
 
+## Storybook
+
+The component catalogue is browsable as a Storybook (`stories/` + `.storybook/`):
+
+```sh
+npm install
+npm run storybook        # dev server on http://localhost:6006
+npm run build-storybook  # static build in storybook-static/
+```
+
+Stories cover the full core component set, foundation pages (Colors, Typography,
+Spacing & Shape, Elevation), and both UI kits as full-screen interactive stories
+(`stories/ui-kits/` shims the kits' browser globals so `ui_kits/` source runs unmodified).
+Global CSS (`styles.css`) is loaded in `.storybook/preview.js`, and the toolbar's
+background switcher offers the brand surfaces (page, card, cream, ink).
+
 ## Index / manifest
 
 Root files:
