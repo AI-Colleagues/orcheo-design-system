@@ -2,15 +2,15 @@ import React from "react";
 
 const CSS = `
 .orc-btn {
-  --_bg: var(--orange-500);
-  --_bg-hover: var(--orange-600);
-  --_bg-active: var(--orange-700);
+  --_bg: var(--action-primary);
+  --_bg-hover: var(--action-primary-hover);
+  --_bg-active: var(--action-primary-active);
   --_fg: var(--text-on-brand);
   --_border: transparent;
   display: inline-flex; align-items: center; justify-content: center;
   gap: var(--space-2);
   font-family: var(--font-sans);
-  font-weight: var(--weight-medium);
+  font-weight: var(--weight-semibold);
   line-height: 1;
   white-space: nowrap;
   border: 1px solid var(--_border);
@@ -36,13 +36,23 @@ const CSS = `
 .orc-btn--block { width: 100%; }
 
 /* variants */
-.orc-btn--primary { box-shadow: var(--shadow-xs); }
+.orc-btn--primary {
+  /* faint top sheen keeps the orange from reading flat */
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.16), var(--shadow-xs);
+}
+.orc-btn--primary:hover {
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.16), var(--shadow-sm);
+}
+.orc-btn--primary:hover:focus-visible {
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.16), var(--ring-focus), var(--shadow-sm);
+}
 .orc-btn--secondary {
-  --_bg: var(--surface-card); --_bg-hover: var(--ink-50); --_bg-active: var(--ink-100);
+  --_bg: var(--surface-card); --_bg-hover: var(--surface-hover); --_bg-active: var(--surface-active);
   --_fg: var(--text-strong); --_border: var(--border-default);
 }
+.orc-btn--secondary:hover { border-color: var(--border-strong); }
 .orc-btn--ghost {
-  --_bg: transparent; --_bg-hover: var(--ink-100); --_bg-active: var(--ink-200);
+  --_bg: transparent; --_bg-hover: var(--surface-hover); --_bg-active: var(--surface-active);
   --_fg: var(--text-body); --_border: transparent;
 }
 .orc-btn--danger {
@@ -50,8 +60,10 @@ const CSS = `
   --_fg: #fff;
 }
 .orc-btn--inverse {
-  --_bg: var(--ink-950); --_bg-hover: var(--ink-800); --_bg-active: var(--ink-700);
-  --_fg: var(--ink-50);
+  --_bg: var(--surface-inverse);
+  --_bg-hover: color-mix(in srgb, var(--surface-inverse) 86%, var(--surface-page));
+  --_bg-active: color-mix(in srgb, var(--surface-inverse) 74%, var(--surface-page));
+  --_fg: var(--surface-page);
 }
 .orc-btn__icon { display: inline-flex; width: 1.1em; height: 1.1em; }
 .orc-btn__icon svg { width: 100%; height: 100%; }
