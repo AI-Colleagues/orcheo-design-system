@@ -206,7 +206,7 @@ Root files:
 - `readme.md` — this file. `SKILL.md` — Agent-Skills wrapper.
 
 Assets (`assets/`):
-- `orcheo-icon.png` — Orcheo product app icon (orange squircle orchestration ring).
+- `orcheo-mark.png` — Orcheo product app icon (orange squircle orchestration ring).
 - `aic-mark.png` — AI Colleagues corporate mark, black on white.
 - `aic-mark-ink.png` — AIC mark, ink on transparent (for light surfaces).
 - `aic-mark-white.png` — AIC mark, white on transparent (for ink/orange surfaces).

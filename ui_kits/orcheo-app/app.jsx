@@ -35,7 +35,7 @@ function Sidebar({ view, go, runningCount }) {
   return (
     <aside className="side">
       <div className="side__brand">
-        <img src="../../assets/orcheo-icon.png" alt="Orcheo" />
+        <img src="../../assets/orcheo-mark.png" alt="Orcheo" />
         <div>
           <b>Orcheo</b>
           <span>by AI Colleagues</span>

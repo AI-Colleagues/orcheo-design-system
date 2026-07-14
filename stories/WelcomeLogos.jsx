@@ -46,7 +46,7 @@ export const WelcomeLogos = () => {
       }}
     >
       <img
-        src="./orcheo-icon.png"
+        src="./orcheo-mark.png"
         alt="Orcheo product icon with rounded orange tile"
         width="96"
         height="96"
