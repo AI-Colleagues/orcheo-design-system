@@ -68,6 +68,10 @@
   --surface-brand:    var(--orange-500); /* primary CTAs, brand fills */
   --surface-brand-soft: var(--orange-50);/* tinted brand backgrounds */
   --surface-cream:    var(--cream-200);  /* warm feature sections */
+  --surface-hover:    var(--ink-100);    /* neutral hover tint (ghost/secondary) */
+  --surface-active:   var(--ink-200);    /* neutral pressed tint */
+  --surface-glass:    rgba(255, 255, 255, 0.82); /* sticky nav / translucent bars */
+  --dot-grid-color:   var(--ink-200);    /* canvas dot lattice */
 
   /* Text */
   --text-strong:   var(--ink-950);   /* headings */
@@ -96,4 +100,57 @@
   --intent-warning: var(--amber-500);  --intent-warning-bg: var(--amber-100);
   --intent-danger:  var(--red-500);    --intent-danger-bg:  var(--red-100);
   --intent-info:    var(--blue-500);   --intent-info-bg:    var(--blue-100);
+}
+
+/* ============================================================
+   DARK THEME — warm ink, never cool gray-blue.
+   Opt in with `class="dark"` or `data-theme="dark"` on <html>.
+   Raw ramps stay untouched; only semantic aliases flip, so any
+   UI written against the aliases is dark-ready for free.
+   ============================================================ */
+
+.dark,
+[data-theme="dark"] {
+  color-scheme: dark;
+
+  /* Surfaces */
+  --surface-page:     var(--ink-950);
+  --surface-card:     var(--ink-900);
+  --surface-sunken:   #121110;               /* wells sit below the card plane */
+  --surface-inverse:  var(--ink-50);
+  --surface-brand:    var(--orange-500);
+  --surface-brand-soft: rgba(248, 120, 37, 0.14);
+  --surface-cream:    #16140f;               /* cream sections go warm-charcoal */
+  --surface-hover:    var(--ink-800);
+  --surface-active:   var(--ink-700);
+  --surface-glass:    rgba(14, 14, 12, 0.82);
+  --dot-grid-color:   #26241f;
+
+  /* Text */
+  --text-strong:   var(--ink-50);
+  --text-body:     var(--ink-200);
+  --text-muted:    var(--ink-400);
+  --text-subtle:   var(--ink-500);
+  --text-on-brand: var(--white);
+  --text-on-dark:  var(--ink-100);
+  --text-brand:    var(--orange-300);
+
+  /* Borders & lines */
+  --border-subtle:  var(--ink-800);
+  --border-default: var(--ink-700);
+  --border-strong:  var(--ink-600);
+  --border-brand:   var(--orange-500);
+  --border-circuit: rgba(224, 192, 144, 0.28);
+
+  /* Interactive states — lighten on dark, never darken */
+  --action-primary:        var(--orange-500);
+  --action-primary-hover:  var(--orange-400);
+  --action-primary-active: var(--orange-300);
+  --focus-ring:            var(--orange-400);
+
+  /* Semantic intents — deep warm tints behind the same hues */
+  --intent-success-bg: #16281e;
+  --intent-warning-bg: #2c2210;
+  --intent-danger-bg:  #331712;
+  --intent-info-bg:    #16222c;
 }
