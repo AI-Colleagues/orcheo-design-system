@@ -1,4 +1,5 @@
 import { Meta } from "@storybook/addon-docs/blocks";
+import { WelcomeLogos } from "./WelcomeLogos";
 
 <Meta title="Welcome" />
 
@@ -12,10 +13,7 @@ workflow orchestration platform.
 > They share type, spacing, motion, and components; they differ in dominant color and voice.
 > Use **ink/black + restraint** for AIC corporate surfaces, **orange + warmth** for Orcheo product.
 
-<div style={{ display: "flex", gap: 24, alignItems: "center", margin: "24px 0" }}>
-  <img src="./orcheo-icon.png" alt="Orcheo product icon with rounded orange tile" width="96" />
-  <img src="./aic-mark.png" alt="AI Colleagues corporate mark with rounded white tile" width="96" />
-</div>
+<WelcomeLogos />
 
 The product icon is maintained as a 1024×1024 SVG source with a matching PNG export. Its
 background tile uses a generous 22% corner radius and transparent outer corners so it stays
