@@ -2,9 +2,9 @@ import React from "react";
 
 const CSS = `
 .orc-btn {
-  --_bg: var(--orange-500);
-  --_bg-hover: var(--orange-600);
-  --_bg-active: var(--orange-700);
+  --_bg: var(--action-primary);
+  --_bg-hover: var(--action-primary-hover);
+  --_bg-active: var(--action-primary-active);
   --_fg: var(--text-on-brand);
   --_border: transparent;
   display: inline-flex; align-items: center; justify-content: center;
@@ -42,6 +42,9 @@ const CSS = `
 }
 .orc-btn--primary:hover {
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.16), var(--shadow-sm);
+}
+.orc-btn--primary:hover:focus-visible {
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.16), var(--ring-focus), var(--shadow-sm);
 }
 .orc-btn--secondary {
   --_bg: var(--surface-card); --_bg-hover: var(--surface-hover); --_bg-active: var(--surface-active);
