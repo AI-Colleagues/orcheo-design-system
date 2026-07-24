@@ -16,14 +16,20 @@ export default {
     docs: {
       description: {
         component:
-          "Hi-fi recreation of the Orcheo product, composed from the design-system primitives " +
-          "(Button, IconButton, Badge, NodeChip, Tabs, Avatar, Card, Tag, Dialog). " +
-          "It's interactive: click a workflow card to open its orchestration canvas, " +
-          "hit Run to watch the agent node execute and land on the run timeline, " +
-          "and use the sidebar to reach Runs and Connectors. " +
-          "Source lives in `ui_kits/orcheo-app/` — this story runs it unmodified.",
+          "Hi-fi recreation of the Orcheo product shell, aligned with the real Studio in `apps/studio/src`. " +
+          "The chrome lives in a **collapsible left sidebar** with the primary areas — AI Colleagues, " +
+          "Apps, Credential Vault, Feedback & issues — and a bottom **profile menu** that holds " +
+          "Profile, Settings, Workspace Management, a second-order **workspace switcher** submenu, and Log out. " +
+          "There is no top bar; each page opens straight into its content. " +
+          "The AI Colleagues landing mirrors the real workflow-card badges (AI Teams / Starred / Candidates " +
+          "tabs, Upload, portrait colleague badges); other sub-pages are re-composed from the design-system " +
+          "primitives: a colleague's orchestration canvas + run timeline, the Apps area (upload / export / " +
+          "delete / publish / unpublish with deployment history and workflow bindings), Workspace Management " +
+          "(members + API keys), Settings (a working light/dark/system theme toggle), and Profile. " +
+          "The **Credential Vault** is a popup that opens over any page. " +
+          "Source lives in `ui_kits/orcheo-app/`.",
       },
-      story: { inline: false, iframeHeight: 720 },
+      story: { inline: false, iframeHeight: 760 },
     },
   },
 };
